@@ -13,3 +13,11 @@ closeModal.addEventListener('click', () => {
 })
 
 
+const boxes = document.querySelectorAll('.switchable-content');
+
+boxes.forEach(box => {
+  box.addEventListener('click', () => {
+    boxes.forEach(box => box.classList.remove('active'));
+    box.classList.add('active');
+  });
+});

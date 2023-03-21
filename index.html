@@ -18,21 +18,26 @@
     </div>
     <!-- popup modal content -->
     <dialog class="modal">
-        <div class="modal-container">
+        <!-- setting content -->
+        <div class="header">
+            <p class="header-content p">User</p>
+            <h1 class="header-content h1">Erik Ten Hag</h1>
+        </div>
+        <div id="setting-content" class="switchable-tab setting">
             <div class="tab-container">
-                <div id="setting">
+                <div id="setting" class="switchable-content active" >
                     SETTING
                 </div>
 
-                <div id="contact-info">
+                <div id="contact-info" class="switchable-content">
                     CONTACT INFO
                 </div>
 
-                    <div id="dateAndTime">
+                    <div id="dateAndTime" class="switchable-content">
                     DATE & TIME
                 </div>
 
-                <div id="twoFactorAuthentication">
+                <div id="twoFactorAuthentication" class="switchable-content">
                     2FA
                 </div>
             </div>
@@ -68,8 +73,10 @@
             </div> 
             <!-- button to close modal -->
         </div>
-        <div class="button-line"></div>
-        <button class="button close-modal">CLOSE</button>
+
+        <!-- button and button line -->
+            <div class="button-line"></div>
+            <button class="button close-modal">CLOSE</button>
     </dialog>    
     <!-- end of popup modal content -->
     <script src="./function.js"></script>

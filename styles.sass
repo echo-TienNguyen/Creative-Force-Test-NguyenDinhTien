@@ -10,13 +10,35 @@
 
 // * 
 // //   border: 1px solid red
-
+// Click able right side navigation
 .clickable-div
     display: flex
     justify-content: flex-end
     margin-right: 30px
     margin-top: 20px
     cursor: pointer
+
+// header of popup modal
+.header 
+    width: 100%
+    padding-top: 1.5rem
+    padding-bottom: 1rem
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.11)
+
+.header-content
+    padding-left: 2rem  
+
+.header-content.p 
+    font-weight: 500
+    font-size: 1rem
+    line-height: 1,1rem
+    padding-bottom: 0.2rem
+
+.header-content.h1
+    font-weight: 300
+    font-size: 2rem
+    line-height: 2.1rem
+
 
 .image
     width: 50px
@@ -60,7 +82,7 @@
     padding-left: 1rem
     margin-bottom: 1rem
     width: 100%
-    min-height: 3rem 
+    min-height: 3.2rem 
     font-size: 0.9rem
     font-weight: 500
     color: #262626
@@ -68,6 +90,7 @@
     background-color: #f6f6f6
     border-radius: 2px
     box-sizing: border-box
+    cursor: pointer
     
 #setting 
     @include tab-style
@@ -89,24 +112,19 @@
 
 .modal 
     width: 45%
-    height: 60%
+    height: 65vh
     border-radius: 10px
     opacity: 0
-    padding: 2em
     margin: auto
     overflow: hidden
     box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.15)
     border: 0px 
 
 // a bit reponsive
-@media only screen and (max-width: 768px) 
+@media only screen and (max-width: 900px) 
     .modal 
         width: 90%
         overflow-y: scroll
-        padding: 1rem
-
-    div.modal-container
-        justify-content: center
 
     .tab-content-container
         width: 90%
@@ -114,20 +132,30 @@
     .tab-content
         flex-wrap: wrap
 
-    #contact-info
-        padding-left: unset
-
-    #dateAndTime
-        padding-left: unset 
-
-    #setting
-        padding-left: unset
-
-    #twoFactorAuthentication
-        padding-left: unset
 
     .tab-content
         justify-content: center
+
+    .button-line
+        top: 0%
+
+
+    .tab-content-container
+        margin: auto
+
+    .tab-container
+        margin: auto
+        padding: auto
+
+    .first-name-input
+        height: 2.5rem
+
+    .last-name-input
+        height: 2.5rem
+
+    .emailInput
+        height: 2.5rem
+
 
 // Add ease in animation for modal 
 // By select open atribute when the modal is open
@@ -142,9 +170,6 @@
 
 
 
-
-.setting-content
-    display: inline
 
 .tab-container
     display: inline-block
@@ -195,8 +220,9 @@
     flex: 1
     max-width: 100%
 
-.modal-container
+#setting-content
     display: flex
+    padding: 2rem
     justify-content: space-between
     width: 100%
     padding-top: 2vw
@@ -226,26 +252,34 @@
 
 // style close button
 .button.close-modal
-    display: flex
+    // display: flex
     position: relative
-    top: 37%
-    left: 89%
-    justify-content: space-between
-    align-items: center
+    margin-left: 38vw
+    margin-top: 8vh
     padding: 10px 24px
     border-radius: 4px
     border: 1px solid #989898
     font-size: 0.8rem
 
     &:hover
-        background-color: #DA291C
+        background-color: #000
         color: white
 
 .button-line
-    display: block
-    position: relative
-    top: 30%
-    left: 0%
+    position: block
+    bottom: 0
+    // right: 0
+    margin-right: 2.5rem
+    margin-left: 2.5rem
+    margin-top: 3rem
     border-top: 1px solid rgba(193, 193, 193, 0.6)
 
+
+
+.switchable-content.active 
+    background: url(https://i.ibb.co/Xj1zsgV/image-1.png) no-repeat
+    background-position: right
+    // background-size: contain
+    background-color: #000 !important
+    color: white !important
 
